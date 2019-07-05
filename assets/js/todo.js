@@ -21,6 +21,11 @@ $("input[type='text']").keypress(function(event){
         let newTodo = $(this).val();
         $(this).val("");
         // create new li and add to ul
-        $("ul").append("<li><span>X</span> " + newTodo + "</li>");
+        $("ul").append('<li><span><i class="fas fa-trash"></i></span> ' + newTodo + '</li>');
     }
 });
+
+// Add the ability to toggle the text input on or off with the plus icon in the header.
+$("#add-todo").click(function(){
+    $("input[type='text']").fadeToggle();
+})

@@ -24,6 +24,27 @@ ul {
     padding: 0;
 }
 
+li span {
+    background-color: #e74c3c;
+    color:white;
+    opacity: 0;
+
+    height: 40px;
+    width: 0;
+    margin-right: 20px;
+    display: inline-block;
+
+    text-align: center;
+
+    transition: 0.2s linear;
+}
+
+/* This li hover primarily affects the span so I'm placing it under span but also next to li. */
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
 li {
     background-color: white;
     color: #333333;
@@ -36,9 +57,11 @@ li:nth-child(2n){
     background-color: #f7f7f7;
 }
 
+
 input {
     background-color: #f7f7f7;
     color: #5785a1;
+    border: 3px solid rgba(0, 0, 0, 0);
 
     width: 100%;
     padding: 13px 13px 13px 20px;
